@@ -2,7 +2,7 @@ import { CorsOptions } from "cors";
 
 export const corsConfig: CorsOptions = {
   origin: (origin, callback) => {
-    const whiteList = [process.env.FRONTEND_URL];
+    const whiteList = [process.env.FRONTEND_URL, process.env.N8N_URL];
     if (process.argv[2] === "--api") {
       whiteList.push(undefined);
     }
